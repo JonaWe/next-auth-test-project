@@ -21,6 +21,10 @@ export default function Home() {
           <>
             <p>Signed in as {session.user.email}</p>
             <p>{JSON.stringify(session.user, null, 2)}</p>
+            <p>
+              You are now able to access the{' '}
+              <Link href="protected">protected page</Link>
+            </p>
             <button onClick={signOut}>Sign Out</button>
           </>
         )}
