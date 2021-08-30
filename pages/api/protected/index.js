@@ -8,5 +8,7 @@ export default async (req, res) => {
       content:
         'This is a super secret message only visible to logged in users!',
     });
+  } else {
+    res.status(401).send();
   }
 };
