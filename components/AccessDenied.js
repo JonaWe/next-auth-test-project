@@ -1,4 +1,4 @@
-import React from 'react';
+import { signIn } from 'next-auth/client';
 
 export default function AccessDenied() {
   return (
@@ -11,6 +11,7 @@ export default function AccessDenied() {
       }}
     >
       <h1 style={{ color: 'red' }}>Access Denied!</h1>
+      <button onClick={signIn}>Sign In</button>
     </div>
   );
 }
